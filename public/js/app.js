@@ -26,7 +26,7 @@ contactForm.addEventListener("submit", e => {
     if (!response.ok) {
       throw new Error(`Request failed with status ${reponse.status}`);
     }
-    console.log("Email sent successfully");
+    alert("Email sent successfully");
     name.value = "";
     email.value = "";
     subject.value = "";
