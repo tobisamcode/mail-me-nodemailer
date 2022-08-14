@@ -2,6 +2,8 @@ const express = require("express");
 const ejs = require("ejs");
 const app = express();
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const PORT = process.eventNames.PORT || 5000;
 
@@ -20,22 +22,25 @@ app.post("/", (req, res) => {
   console.log(req.body);
 
   const transporter = nodemailer.createTransport({
-    service: "Gmail",
+    service: "gmail",
+    host: "smtp.mail.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: "samueloluwatobiloba48@gmail.com",
-      pass: "nelson2000"
+      user: process.env.EMAIL_TEST,
+      pass: process.env.EMAIL_TEST_PSW
     }
   });
 
-  const mailOPtions = {
-    from: req.body.email,
-    to: "samueloluwatobiloba48@gmail.com",
+  const mailOptions = {
+    from: process.env.EMAIL_TEST,
+    to: process.env.EMAIL_TEST,
     subject: `Message from ${req.body.name}, ${req.body.email}: ${req.body
       .subject}`,
     text: req.body.message
   };
 
-  transporter.sendMail(mailOPtions, (error, info) => {
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
       res.send("error");
