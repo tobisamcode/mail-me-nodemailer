@@ -22,17 +22,16 @@ contactForm.addEventListener("submit", e => {
         "Content-Type": "application/json"
       }
     });
-
-    if (!response.ok) {
+    if (response.ok) {
+      alert("Email sent successfully");
+    } else if (!response.ok) {
       throw new Error(`Request failed with status ${reponse.status}`);
     }
-    alert("Email sent successfully");
+
     name.value = "";
     email.value = "";
     subject.value = "";
     message.value = "";
-
-    console.log(formData);
   }
   postData();
 });
