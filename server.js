@@ -5,7 +5,7 @@ const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
 dotenv.config();
 
-const PORT = process.eventNames.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 
 // MiddleWares
 app.set("view engine", "ejs");
