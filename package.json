@@ -4,8 +4,7 @@
   "description": "`app.js`",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js",
-    "start": "node server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "Tobisam",
