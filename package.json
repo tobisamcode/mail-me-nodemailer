@@ -1,14 +1,14 @@
 {
   "name": "mail-me",
   "version": "1.0.0",
-  "description": "",
+  "description": "`app.js`",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Tobisam",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.1",
@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobisamcode/mail-me-nodemailer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tobisamcode/mail-me-nodemailer/issues"
+  },
+  "homepage": "https://github.com/tobisamcode/mail-me-nodemailer#readme"
 }
