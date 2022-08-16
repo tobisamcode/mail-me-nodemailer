@@ -11,18 +11,34 @@
     <div class="form-container">
       <form action="" class="contact-form">
         <h2>CONTACT</h2>
-        <input type="text" required id="name" placeholder="Full name" />
-        <input type="email" required id="email" placeholder="Email" />
-        <input type="text" required id="subject" placeholder="Subject" />
-        <textarea
-          id="message"
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your full name"
           required
-          placeholder="message"
+        />
+        <br />
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email address"
+          required
+        />
+        <br />
+        <input type="text" id="subject" placeholder="Subject" required /> <br />
+        <textarea
+          type="text"
+          id="message"
           cols="30"
           rows="10"
-        >
-        </textarea>
+          placeholder="message"
+          required
+        ></textarea>
+        <br />
+        <input type="submit" class="submit" value="Send Message" />
       </form>
     </div>
+
+    <script src="/js/app.js"></script>
   </body>
 </html>
