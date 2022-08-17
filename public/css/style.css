@@ -64,4 +64,8 @@ textarea:focus {
     height: 100vh;
     background-color: #ffffff;
   }
+  
+}
+label > span{
+  color: red;
 }
